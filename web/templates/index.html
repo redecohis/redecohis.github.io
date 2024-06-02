@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <style>
+    html{
+        background-image: url('images/html.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    body{
+        background-image: url('images/body.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #myAlert {
+        display: none;
+        position: fixed; /* 改为fixed，使其固定在视窗的左上角 */
+        top: 0;
+        left: 0;
+        padding: 5px; /* 缩小padding */
+        background-color: white; /* 改底色为白色 */
+        color: black;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 1000;
+        font-size: 12px;
+    }
+    </style>
+    <title>奇奇怪怪现编小故事</title>
+</head>
+<body onclick="showAlert()">
+
+    <div id="myAlert">小Tips: 可以点击图片或刷新一下页面试试，也许会有什么事情发生哦~</div>
+
+    <h1>奇奇怪怪现编小故事</h1>
+    <h2>欢迎购买</h2>
+    <img src="images/1.jpg" alt="随机图片">
+
+    <h4 id="randomText">这里会显示递进文字</h4>
+
+    <p>在我们的商品中，您有以下三种选择：</p>
+    <ul>
+        <li>以悲剧结束</li>
+        <li>以喜剧结束</li>
+        <li>开放式结局</li>
+    </ul>
+    
+    <p>现有库存：</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>以悲剧结束</th>
+                <th>以喜剧结束</th>
+                <th>开放式结局</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10</td>
+                <td>10</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>以下为<b>购买连接:</b>
+        <a href="https://shop455714009.taobao.com/"><i>点我购买</i></a>
+    </p>
+    <button>切换用户</button>
+    <script type="text/javascript">
+        // 预设的语句数组
+        var sentences = [
+            "“每一段旅途都有终点，每一个故事都有其结束的一天。”",
+            "小时候，人们总以为自己会是故事中的主人公",
+            "但往往，世界并不会随着某一个人旋转",
+            "长大后，我们自以为看破一切，认为世间不过是少数者的剧场",
+            "但，世界从来只是一直在旋转而已，它也从未偏爱过某人",
+            "我们也许不是世界的主角，但可以是自己故事的主角",
+            "“故事的结局并不重要，重要的是过程本身。”"
+        ];
+        var textElement = document.getElementById("randomText");
+        // 从会话存储中获取索引，如果不存在则设置为0
+        var index = sessionStorage.getItem('index') ? parseInt(sessionStorage.getItem('index')) : 0;
+
+        // 页面加载时执行函数
+        window.onload = function() {
+            localStorage.removeItem('alertShown');
+            // 显示当前索引的语句
+            textElement.innerHTML = sentences[index];
+            // 索引递增
+            index++;
+            // 如果索引超过数组长度，重置为零
+            if (index >= sentences.length) {
+                index = 0;
+            }
+            // 更新会话存储中的索引
+            sessionStorage.setItem('index', index);
+        };
+        // 用户点击页面时显示提示框的函数
+        function showAlert() {
+            // 检查localStorage中是否已经显示过提示
+            if (!localStorage.getItem('alertShown')) {
+                var alertBox = document.getElementById('myAlert');
+                alertBox.style.display = 'block';
+                setTimeout(function() {
+                    alertBox.style.display = 'none';
+                    // 设置标记，表示提示已显示
+                    localStorage.setItem('alertShown', 'true');
+                }, 5000); // 提示持续时间为5秒
+            }
+        }
+    </script>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/1.js" defer></script>
+</body>
+</html>
