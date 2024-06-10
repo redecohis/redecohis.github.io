@@ -5,141 +5,129 @@
     <title>红色经济史学习与推广平台</title>
     <link rel="stylesheet" href=plugins/bootstrap-3.4.1/css/bootstrap.css>
     <link rel="stylesheet" href=css/1.css>
-
 <style>
+    #head {
+            height: 250px;
+            background: url(img/upimg.png);
+            margin: 0px auto;
+            position: relative;
+        }    
     .menus {
-        width: 200px;
+        width: 150px;
         height: 1000px;
-        border: 1px solid red;
+        border: 5px solid black;
+        font-size: 18px;
+        color: #000;
     }
 
     .menus .header {
-        padding: 5px 5px;
-        border-bottom: 1px dotted gray;
+        padding: 15px 15px;
+
         cursor: pointer;
     }
 
     .menus .content a {
         display: block;
-        padding: 5px 5px;
-        border-bottom: 1px dotted gray;
+        padding: 15px 15px;
+        border-bottom: 1px dotted black;
     }
 
     .hide {
         display: none;
     }
+
+    #main {
+            padding: 25px 35px;
+            background: #FFF;
+            border: 4px #b6b3ac solid;
+            border-top: #beb7ae 7px solid;
+            margin: 0px auto;
+            position: absolute;
+            bottom: 0;
+            left: calc(100% - 1200px); 
+            width: calc(100% - 300px);
+            height: 1000px;
+        }
+        #main #jieshao {
+            position: relative;
+        }   
+        #main #jieshao h1 {
+            font-family: '微软雅黑';
+            font-size: 36px;
+            text-align: center;
+            padding-bottom: 16px;
+        }
+        #main #jieshao p {
+            line-height: 28px;
+            font-size: 14px;
+            padding: 15px 0px;;
+        }
+        .right-aligned-text {
+            white-space: pre-wrap;
+            text-align: right;
+        }
     .navbar-custom {
     background-image: url('img/body.png');
     background-size: cover; /* 让图片铺满整个导航栏 */
     background-repeat: no-repeat; /* 防止图片重复 */
     }
 </style>
-
 </head>
 
 <body>
-<div id="upimg">
-    <img src="img/upimg.png" alt="陕甘宁">
-</div>
+
 
 <nav class="navbar navbar-default navbar-custom">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-
+    <div id="head"></div>
     <div class="menus">
-    <div class="item">
-        <div class="header" onclick="clickMe(this);">运输队规模</div>
-        <div class="content hide">
-            <a>静海区</a>
-            <a>东丽区</a>
-            <a>西青区</a>
-            <a>宝坻区</a>
-            <a>滨海新区</a>
+        <div class="item">
+            <div class="header" onclick="clickMe(this);">首页</div>
+        </div>
+
+        <div class="item">
+            <div class="header" onclick="clickMe(this);">参考书目</div>
+        </div>
+
+        <div class="item">
+            <div class="header" onclick="clickMe(this);">数据库</div>
+            <div class="content hide">
+                <a href="#">财政</a>
+                <a href="#">人口</a>
+                <a href="#">税收</a>
+                <a href="#">对外经济贸易</a>
+                <a href="#">农业</a>
+                <a href="#">工业</a>
+                <a href="#">其他</a>
+            </div>
         </div>
     </div>
-    <div class="item">
-        <div class="header" onclick="clickMe(this);">筹集物资、黄金</div>
-        <div class="content hide">
-            <a>静安区</a>
-            <a>奉贤区</a>
-            <a>浦东新区</a>
-            <a>徐汇区</a>
-            <a>青浦区</a>
+
+    <div id="main">
+        <div id="jieshao">
+            <h1>网站介绍</h1>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;恩格斯在《卡尔·马克思〈政治经济学批判〉》中指出，无产阶级的政党，“它的全部理论内容是从研究政治经济学产生的”。中国共产党建党百余年以来的红色经济史，正是马克思主义政治经济学的基本原理与中国革命、建设、改革、复兴事业不断结合的历史，也是不断推动马克思主义中国化、时代化的历史，更是中国共产党带领全国各族人民以中国式现代化全面推进中华民族伟大复兴的历史。&nbsp;
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陕甘宁革命根据地是土地革命战争时期唯一留存下来的革命根据地，成为了红军长征胜利的落脚点和夺取全国胜利的出发点。自1935年10月至1948年3月，陕甘宁革命根据地作为党中央领导全国革命的大本营，中国共产党的各项政策，包括经济政策，很多都是在陕甘宁根据地率先实行，然后再推广到其他革命根据地的。陕甘宁根据地的人民在中国共产党领导下建设经济、变革财政、发展金融、搞活贸易，不仅大幅改善了根据地人民生活水平，而且支撑了中国革命取得辉煌胜利，还必将对我国当前和未来的经济工作提供不可或缺的宝贵经验。&nbsp;
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;习近平总书记指出，“革命老区是党和人民军队的根，我们不能忘记我们是从哪里走来的，永远都要从革命历史中汲取智慧和力量”。为此，我们建设了《红色经济史学习与推广平台（陕甘宁革命根据地1934-1949）》，旨在向社会各界提供红色经济史的知识普及、数据资源和政策梳理，以期提高对红色经济史的认识、促进对红色经济史的学术研究、传承红色经济史中所蕴含的革命精神。&nbsp;
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在《红色经济史学习与推广平台》中，所有数据均来源于所列参考文献，由杨昊锟同学、宋润石同学、姜威宇同学、汪隆俊同学、向磊同学摘录，由王璨璨同学、张佳彦同学、朱逸然同学、王浩哲同学、王卓同学整理，由余许多同学、李皓同学校对，由毛杰老师、陆甦颖老师、叶鹏老师、魏峭巍老师、冯玉鑫老师复核和指导，并由毛杰老师总校。囿于时间仓促，加之编者水平有限，《红色经济史学习与推广平台》仅对已收集到的资料进行了整理编辑，未能多方请教，挂一漏万在所难免，恳请各位专家学者和广大热心读者批评指正。
+            </p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;吴起镇的隆隆炮声早已远去，光华商店的代价券早已褪色，宝塔山下的座座窑洞也已斑驳，但以中国共产党为领导主体的红色经济史，不仅载在史册中，更深深印刻在广大群众的心里。&nbsp;
+            </p>
+            <p class="right-aligned-text">
+                编者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                2024年6月
+            </p>
+        
         </div>
     </div>
-    <div class="item">
-        <div class="header" onclick="clickMe(this);">上海1</div>
-        <div class="content hide">
-            <a>静安区</a>
-            <a>奉贤区</a>
-            <a>浦东新区</a>
-            <a>徐汇区</a>
-            <a>青浦区</a>
-        </div>
-    </div>
-    <div class="item">
-        <div class="header" onclick="clickMe(this);">上海2</div>
-        <div class="content hide">
-            <a>静安区</a>
-            <a>奉贤区</a>
-            <a>浦东新区</a>
-            <a>徐汇区</a>
-            <a>青浦区</a>
-        </div>
-    </div>
-</div>
+</nav>
 
 <script src="js/jquery-3.7.1.min/jquery-3.7.1.min.js"></script>
 <script type="text/javascript">
