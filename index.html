@@ -6,28 +6,30 @@
    <link rel="stylesheet" href=plugins/bootstrap-3.4.1/css/bootstrap.css>
 <style>
     #head {
+            position: relative;
+            width: 100%;
             height: 250px;
             background: url(img/upimg.png);
-            margin: 0px auto;
-            position: relative;
         }    
     .menus {
-        width: 150px;
-        height: calc(250px + 100vh);
+        position: relative;
+        width: 15%;
+        min-height: calc(250px + 100vh);
+        overflow-y: scroll;
         border: 5px solid black;
         font-size: 18px;
         color: #000;
+        bottom: 0;
+        left: 0px;
     }
-
     .menus .header {
-        padding: 15px 15px;
-
+        padding: 1px 1px;
         cursor: pointer;
     }
 
     .menus .content a {
         display: block;
-        padding: 15px 15px;
+        padding: 1px 1px;
         border-bottom: 1px dotted black;
     }
 
@@ -36,13 +38,12 @@
     }
 
     #main {
+            position: absolute;
             padding: 25px 35px;
             background: #FFF;
             border: 1px #b6b3ac solid;
             border-top: #beb7ae 1px solid;
-            margin: 0px auto;
-            position: absolute;
-            bottom: 0;
+            top: 250px;
             left: calc(100% - 82.5%); 
             width: calc(100% - 20%);
             height: calc(250px + 100vh);
@@ -59,19 +60,35 @@
         #main #jieshao p {
             line-height: 28px;
             font-size: 14px;
-            padding: 15px 0px;;
+            padding: 1px 0px;
         }
         .right-aligned-text {
             white-space: pre-wrap;
             text-align: right;
         }
-    
+    .links {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        float: left;
+        font-size: 0px;
+        top: calc(250px + 100vh);
+        display: flex; 
+        justify-content: space-around; 
+    }
+    .links li {
+        float: left;
+        padding: 0 16px 0 0;
+        display: block;
+    }
 </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-default navbar-custom">
+<nav class="navbar navbar-default navbar-custom">
         <div id="head"></div>
         <div class="menus">
             <div class="item">
@@ -223,6 +240,14 @@
         </div>
     </div>
 </nav>
+<ul class="links">
+    <li style="padding:0;"><a href="https://museum.shu.edu.cn/" target="_blank"><img src="img/links1.jpg" width="178" height="43"></a></li>
+    <li style="padding:0;"><a href="https://www.shanghaimuseum.net" target="_blank"><img src="img/links2.jpg" width="178" height="43"></a></li>
+    <li style="padding:0;"><a href="https://www.shanghaimuseum.net" target="_blank"><img src="img/links3.jpg" width="178" height="43"></a></li>
+    <li style="padding:0;"><a href="https://www.shanghaimuseum.net" target="_blank"><img src="img/links4.jpg" width="178" height="43"></a></li>
+    <li style="padding:0;"><a href="https://www.shanghaimuseum.net" target="_blank"><img src="img/links5.jpg" width="178" height="43"></a></li>
+</ul>
+
 
 <script src="js/jquery-3.7.1.min/jquery-3.7.1.min.js"></script>
 <script type="text/javascript">
