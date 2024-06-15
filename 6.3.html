@@ -72,18 +72,23 @@
             text-align: right;
         }
     .links {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        float: left;
-        font-size: 0px;
-        top: calc(250px + 100vh);
-        display: flex; 
-        justify-content: space-around; 
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    font-size: 0px;
+    }
+    .links li {
+    float: left;
+    padding: 0 16px 0 0;
+    display: block;
     }
     #footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
     background: #49402f;
     text-align: center;
     color: #cec4ba;
@@ -311,10 +316,14 @@
     </div>
 </nav>
 
+<ul class="links">
+    <li style="padding:0;"><img src="img/links1.png" width="350" height="75"></li>
+    <li style="padding:0;"><img src="img/links2.png" width="350" height="75"></li>
+    <li style="padding:0;"><img src="img/links3.png" width="350" height="75"></li>
+</ul>
 <div id="footer">
-    <p> <span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 15px; text-align: center;">支持机构：</span><span style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 15px; text-align: center; white-space: normal;">&nbsp;上海红色文化研究院</span><a href="https://dangan.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 15px; text-align: center; white-space: normal;">&nbsp;&nbsp;上海大学档案馆</a><a href="http://www.ccerdata.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 15px; text-align: center; white-space: normal;">&nbsp;&nbsp;色诺芬数据库</a></p>
+    <p>&nbsp; &nbsp;<span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">版权所有 ©</span><a style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">&nbsp;红色文化研究中心</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;"></a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;</span><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp;&nbsp; &nbsp;邮编：200444 &nbsp;&nbsp;</span></p>
 </div>
-
 <script src="js/jquery-3.7.1.min/jquery-3.7.1.min.js"></script>
 <script type="text/javascript">
     function clickMe(self) {
