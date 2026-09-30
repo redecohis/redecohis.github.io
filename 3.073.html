@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>红色经济史学习与推广平台</title>
+    <link rel="stylesheet" href="plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="css/1.css">
+   <style>
+    #head {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background: url(img/beijing.png);
+        }    
+    .menus {
+        position: relative;
+        width: 15%;
+        min-height: 1000px;
+        font-size: 18px;
+        color: #000;
+        bottom: 0;
+        left: 0px;
+    }
+    .menus .header {
+        padding: 6px 1px;
+        cursor: pointer;
+    }
+    .menus .twoheader{
+        padding: 8px 1px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .menus .threeheader{
+        padding: 8px 10px;
+        cursor: pointer;
+        font-size: 13px;
+    }
+
+    .menus .content a {
+        display: block;
+        padding: 1px 1px;
+        border-bottom: 1px dotted black;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #main {
+            text-align: center;
+            position: absolute;
+            padding: 25px 35px;
+            background: #FFF;
+            border: 1px #b6b3ac solid;
+            border-top: #beb7ae 1px solid;
+            top: 250px;
+            left: calc(100% - 82.5%); 
+            width: calc(100% - 20%);
+            height: 1000px;
+        }
+        #main #jieshao {
+            position: relative;
+        }   
+        #main #jieshao h1 {
+            font-family: '微软雅黑';
+            font-size: 36px;
+            text-align: center;
+            padding-bottom: 16px;
+        }
+        #main #jieshao p {
+            line-height: 28px;
+            font-size: 14px;
+            padding: 1px 0px;
+        }
+        .right-aligned-text {
+            white-space: pre-wrap;
+            text-align: right;
+        }
+    .links {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    font-size: 0px;
+    }
+    .links li {
+    float: left;
+    padding: 0 16px 0 0;
+    display: block;
+    }
+    #footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #49402f;
+    text-align: center;
+    color: #cec4ba;
+    padding: 13px 0px;
+    }
+    /* 新增：当前页面高亮样式 */
+    .active-page {
+        color: #c00 !important;
+        font-weight: bold;
+        background-color: #ffe6e6;
+    }
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-custom">
+    <div id="head"></div>
+        <div class="menus">
+            <div style="height:1000px;width:100%;overflow:auto;">
+                <div class="item">
+                    <div class="header" onclick="clickMe(this);"><a href="index.html">首页</a></div>
+                </div>
+        
+                <!-- 新结构开始 -->
+                <div class="item">
+                    <div class="header" onclick="clickMe(this);">一、陕甘宁革命根据地(1934-1949)</div>
+                    <div class="content hide">
+                        <!-- 前言 -->
+                        <div class="twoheader">
+                            <a href="qianyan.html">前言</a>
+                        </div>
+                        
+                        <!-- 统计 -->
+                        <div class="twoheader" onclick="clickMe(this);">统计</div>
+                        <div class="content hide">
+                            <!-- 行政区划 -->
+                            <div class="threeheader">
+                                <a href="1.1.html">1.1 行政区划</a>
+                            </div>
+                            
+                            <!-- 人口 -->
+                            <div class="threeheader">
+                                <a href="2.1.html">1.2 人口</a>
+                                <a href="2.2.html">1.2.1 陕甘宁边区各县区划人口统计表(1941年2月20日)</a>
+                                <a href="2.3.html">1.2.2 葭县城关区一、二、三乡阶级构成(1943年)</a>
+                            </div>
+                            
+                            <!-- 价格 -->
+                            <div class="threeheader">
+                                <a href="4.1.html">1.3 价格</a>
+                                <a href="4.1.html">1.3.1 延安市粮价与物价(1937-1943年)</a>
+                                <a href="4.2.html">1.3.2 延安市逐月分类别物价指数(1941-1942年)</a>
+                                <a href="4.3.html">1.3.3 延安市物价总指数表（1937-1945）</a>
+                                <a href="4.4.html">1.3.4 根据地历年米价统计（1941年-1947年）</a>
+                            </div>
+                            
+                            <!-- 人民生活 -->
+                            <div class="threeheader">
+                                <a href="5.1.html">1.4 人民生活</a>
+                                <a href="5.1.html">1.4.1 各分区每人存粮表（1947年）</a>
+                            </div>
+                            
+                            <!-- 财政 -->
+                            <div class="threeheader">
+                                <a href="6.1.html">1.5 财政</a>
+                                <a href="6.1.html">1.5.1 财政概算收支比较表</a>
+                                <a href="6.2.html">1.5.2 陕甘宁边区历年财政收支对照表</a>
+                                <a href="6.3.html">1.5.3 陕甘宁边区历年财政岁出分类统计表</a>
+                                <a href="6.4.html">1.5.4 陕甘宁边区历年财政岁入分类统计表</a>
+                                <a href="6.5.html">1.5.5 岁入分类统计表</a>
+                            </div>
+                            
+                            <!-- 税收 -->
+                            <div class="threeheader">
+                                <a href="7.1.html">1.6 税收</a>
+                                <a href="7.1.html">1.6.1 根据地全年税收报告表（1946年）</a>
+                                <a href="7.2.html">1.6.2 根据地各月税收总结表（1946年）</a>
+                                <a href="7.3.html">1.6.3 根据地全年税收报告表（1947年）</a>
+                                <a href="7.4.html">1.6.4 根据地各月税收总结表（1947年）</a>
+                            </div>
+                            
+                            <!-- 自然灾害 -->
+                            <div class="threeheader">
+                                <a href="#">1.7 自然灾害</a>
+                            </div>
+                            
+                            <!-- 对外经济贸易 -->
+                            <div class="threeheader">
+                                <a href="9.1.html">1.8 对外经济贸易</a>
+                                <a href="9.1.html">1.8.1 根据地各年进口货物统计表（1944年-1946年）</a>
+                                <a href="9.2.html">1.8.2 根据地各年重要土产出口统计（1944一1946年）</a>
+                                <a href="9.3.html">1.8.3 根据地主要物资出口统计（1944年-1946年）</a>
+                                <a href="9.4.html">1.8.4 全年入境货物统计表（1946年）</a>
+                            </div>
+                            
+                            <!-- 农业 -->
+                            <div class="threeheader">
+                                <a href="10.1.html">1.9 农业</a>
+                                <a href="10.1.html">1.9.1 陕甘宁边区农业统计（1936-1945年）</a>
+                                <a href="10.2.html">1.9.2 陕甘宁边区各分区农作物种类及种植面积比例（1943年）</a>
+                                <a href="10.3.html">1.9.3 陕甘宁边区各分区农作物种类及种植面积比例（1944年）</a>
+                            </div>
+                            
+                            <!-- 工业 -->
+                            <div class="threeheader">
+                                <a href="11.1.html">1.10 工业</a>
+                                <a href="11.1.html">1.10.1 民间纺织业发展统计(1942-1944年)</a>
+                            </div>
+                            
+                            <!-- 商业 -->
+                            <div class="threeheader">
+                                <a href="12.1.html">1.11 商业</a>
+                                <a href="12.1.html">1.11.1 延安市私营商户统计（1937-1944）</a>
+                            </div>
+                            
+                            <!-- 运输业 -->
+                            <div class="threeheader">
+                                <a href="#">1.12 运输业</a>
+                            </div>
+                            
+                            <!-- 合作社 -->
+                            <div class="threeheader">
+                                <a href="14.1.html">1.13 合作社</a>
+                                <!-- 合作社子项过多，这里只保留几个示例 -->
+                                <a href="14.1.html">1.13.1 边区合作社发展概况统计(1937年—1944年3月)</a>
+                                <a href="14.2.html">1.13.2 边区各分区合作社发展情况统计(1944年)</a>
+                                <!-- 其他合作社链接... -->
+                            </div>
+                            
+                            <!-- 金融业 -->
+                            <div class="threeheader">
+                                <a href="15.1.html">1.14 金融业</a>
+                                <a href="15.1.html">1.14.1 边币发行额统计表（1940年12月-1944年2月）</a>
+                            </div>
+                            
+                            <!-- 公共管理 -->
+                            <div class="threeheader">
+                                <a href="16.1.html">1.15 公共管理</a>
+                                <a href="16.1.html">1.15.1 根据地违禁走私统计表（1945年1月-10月）</a>
+                            </div>
+                            
+                            <!-- 其他 -->
+                            <div class="threeheader">
+                                <a href="17.1.html">1.16 其他</a>
+                                <a href="17.1.html">1.16.1 陕甘宁边区气候统计（1940-1945年）</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 调查 -->
+                        <div class="twoheader" onclick="clickMe(this);">调查</div>
+                        <div class="content hide">
+                            <div class="threeheader">
+                                <a href="diaocha1.html">2.1 调查一</a>
+                                <a href="diaocha2.html">2.2 调查二</a>
+                            </div>
+                        </div>
+                        <!-- 参考文献 -->
+                        <div class="item">
+                            <div class="header" onclick="clickMe(this);"><a href="陕甘宁 - ckwx.html">参考文献</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="header" onclick="clickMe(this);">二、晋绥革命根据地</div>
+                    <div class="content hide">
+                        <!-- 暂时留空 -->
+                        <div class="twoheader">
+                            <a href="#">内容建设中...</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 晋察冀边区 -->
+                <div class="item">
+                    <div class="header" onclick="clickMe(this);">三、晋察冀边区</div>
+                    <div class="content hide">
+                        <div class="twoheader"><a href="3-qianyan.html">前言</a></div>
+                        <div class="twoheader" onclick="clickMe(this);">统计</div>
+                        <div class="content hide">
+                            <div class="twoheader" onclick="clickMe(this);">1.1 行政区划</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.005.html">1.1.1 晋察冀行政区人口统计表（1944.11）</a>
+                                    <a href="3.026.html">1.1.2 晋察冀边区冀东办事处所辖各县区划表1（1940年1月）</a>
+                                    <a href="3.306.html">1.1.3 1946年7月27日边委会民政处公布的晋察冀边区所辖专区县统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.2 价格</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.001.html">1.2.1 各个时期发行倍数与购买力倍数变化表</a>
+                                    <a href="3.002.html">1.2.2 物价指数统计表</a>
+                                    <a href="3.010.html">1.2.3 北岳区边币、物价与人口比数统计分析表</a>
+                                    <a href="3.122.html">1.2.4 二专区境内抗战历年粮布价格与边币银币比较表</a>
+                                    <a href="3.155.html">1.2.5 晋察冀边区一九四一、二年主要物价及货币比值统计表 (附表一)</a>
+                                    <a href="3.170.html">1.2.6 几 个 物 价 表</a>
+                                    <a href="3.171.html">1.2.7 边区一九四○年度七月份主要物品价格统计表(元)</a>
+                                    <a href="3.172.html">1.2.8 边区一九四○年度八月份主要物品价格统计表(元) （单位：元）</a>
+                                    <a href="3.173.html">1.2.9 晋察冀边区一九四○年九月份主要物价统计表</a>
+                                    <a href="3.174.html">1.2.10 晋察冀边区一九四〇年九月份主要物价</a>
+                                    <a href="3.175.html">1.2.11 晋察冀边区一九四○年度下半年物价指数表  一九四一年一月二十八日 六月份-基数</a>
+                                    <a href="3.176.html">1.2.12 晋察冀边区一九四〇年度下半年物价指</a>
+                                    <a href="3.177.html">1.2.13 物 价 主 表 (1944 、1、10)</a>
+                                    <a href="3.178.html">1.2.14 物 价 主 表</a>
+                                    <a href="3.179.html">1.2.15 物 价 副 表</a>
+                                    <a href="3.219.html">1.2.16 民国三十年度北岳区各县统累稅征收中主要物品价格变动情形</a>
+                                    <a href="3.240.html">1.2.17 中心地区和边沿地区物价变化统计表</a>
+                                    <a href="3.241.html">1.2.18 敌区物价表二敌区物价变化统计表</a>
+                                    <a href="3.274.html">1.2.19 历年边币发行与购买力变化表（表2）</a>
+                                    <a href="3.304.html">1.2.20 历年货币发行与购买力变化表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.3 金融业</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.003.html">1.3.1 边币实际购买力情况</a>
+                                    <a href="3.091.html">1.3.2 北岳区民国三十一年年度各县救灾粮款表</a>
+                                    <a href="3.100.html">1.3.3 贸易资金对比-一区二区</a>
+                                    <a href="3.104.html">1.3.4 万有纸厂月结累计收支对照表*</a>
+                                    <a href="3.107.html">1.3.5 万有纸厂(由开工至结束)损益表</a>
+                                    <a href="3.109.html">1.3.6 万有纸厂资产负债对照表</a>
+                                    <a href="3.167.html">1.3.7 第四专区游击区敌我市场现状一览表 1944.1</a>
+                                    <a href="3.180.html">1.3.8 货 币 比 值 表</a>
+                                    <a href="3.217.html">1.3.9 北岳区各县统累稅征收中货币比值变动情形</a>
+                                    <a href="3.218.html">1.3.10 统累税征收中贷款与收回数目统计表</a>
+                                    <a href="3.236.html">1.3.11 晋察冀边区各机关团体部队及各界人士救国献金统计表</a>
+                                    <a href="3.242.html">1.3.12 各专区货币比值变化统计表</a>
+                                    <a href="3.243.html">1.3.13 北岳区各县原分配放款数字与实际放出数字比较表</a>
+                                    <a href="3.245.html">1.3.14 行唐贷款成分用途表</a>
+                                    <a href="3.246.html">1.3.15 民国卅一年春耕贷款到期年月与收回情况表</a>
+                                    <a href="3.266.html">1.3.16 第四专区游击区敌我市场现状一览表</a>
+                                    <a href="3.273.html">1.3.17 历年边币发行与购买力变化表（表1）</a>
+                                    <a href="3.279.html">1.3.18 1947年利息统计表</a>
+                                    <a href="3.280.html">1.3.19 冀东支行1947年2月时行员、性别、年龄、出身情况表</a>
+                                    <a href="3.281.html">1.3.20 成份、文化、参加银行年数表</a>
+                                    <a href="3.299.html">1.3.21 1946年9月晋察冀边区银行机构入数统计</a>
+                                    <a href="3.303.html">1.3.22 晋察冀边区银行货币发行统计数</a>
+                                    <a href="3.305.html">1.3.23 1942年9月9日伪币情况资料</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.4 租佃与债务</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.007.html">1.4.1 抗日根据地三阶段工作对比表</a>
+                                    <a href="3.018.html">1.4.2 杜岭村人口、土地与牲畜债务情况统计表</a>
+                                    <a href="3.019.html">1.4.3 十八盘村阶级、土地与牲畜债务情况统计表</a>
+                                    <a href="3.020.html">1.4.4 黄槐峪村阶级、土地与牲畜债务情况统计表</a>
+                                    <a href="3.029.html">1.4.5 地租明细-1938-1945</a>
+                                    <a href="3.033.html">1.4.6 处理各种问题数量比较表（不完整统计）</a>
+                                    <a href="3.034.html">1.4.7 安平县六区死契地赎回的情形</a>
+                                    <a href="3.035.html">1.4.8 安国五个区的统计（减租后）</a>
+                                    <a href="3.037.html">1.4.9 新乐牛素庄（去年减租后）统计表</a>
+                                    <a href="3.083.html">1.4.10 租佃形式比较表（从减租中的统计）</a>
+                                    <a href="3.084.html">1.4.11 龙崇赤九、十区地租形态比较表（减租中的统计）</a>
+                                    <a href="3.088.html">1.4.12 龙延怀减租的区村数统计表</a>
+                                    <a href="3.093.html">1.4.13 龙崇赤减租统计表</a>
+                                    <a href="3.094.html">1.4.14 龙赤减租统计表</a>
+                                    <a href="3.095.html">1.4.15 减租情况统计表</a>
+                                    <a href="3.096.html">1.4.16 龙崇赤清理旧债统计表</a>
+                                    <a href="3.098.html">1.4.17 龙赤清理旧债统计表</a>
+                                    <a href="3.229.html">1.4.18 表一、灵寿一区刘家浦</a>
+                                    <a href="3.251.html">1.4.19 龙崇赤联合县减租统计表</a>
+                                    <a href="3.252.html">1.4.20 龙延怀联合县减租的区村数统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.5 阶级构成</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.021.html">1.5.1 兴旺寨村阶级与土地经营情况统计表</a>
+                                    <a href="3.022.html">1.5.2 大营各寨村阶级、土地与生产情况统计表</a>
+                                    <a href="3.023.html">1.5.3 大安口村阶级、土地经营与生产情况统计表</a>
+                                    <a href="3.024.html">1.5.4 沙坡峪村阶级与土地占有情况统计表</a>
+                                    <a href="3.030.html">1.5.5 抗战前后各阶级人数变化统计表</a>
+                                    <a href="3.032.html">1.5.6 肃宁顶汪村各阶层抗战以来买卖土地统计表</a>
+                                    <a href="3.038.html">1.5.7 阶层土地分布统计表</a>
+                                    <a href="3.039.html">1.5.8 天津近郊华庄子村（地太薄，每人有八亩地才能生活）</a>
+                                    <a href="3.040.html">1.5.9 任邱东大坞村从抗战到今年各阶级变动表</a>
+                                    <a href="3.041.html">1.5.10 建国六区 ×× 村（落后的白点村）土地分散情形表</a>
+                                    <a href="3.042.html">1.5.11 献县陌南村土地分布散情形统计表</a>
+                                    <a href="3.043.html">1.5.12 北岳区平山、行唐、完县、唐县八个支部由一九三七年十二月到一九四一年七月党员成分变动表</a>
+                                    <a href="3.047.html">1.5.13 陕甘宁边区1937-1942年阶层人口户数变化表</a>
+                                    <a href="3.048.html">1.5.14 买卖地-抽地-游击区-当地</a>
+                                    <a href="3.063.html">1.5.15 阶层分布及土地占有情况表</a>
+                                    <a href="3.064.html">1.5.16 地主富农与贫农中农土地分配对比表</a>
+                                    <a href="3.067.html">1.5.17 抗战前（1937）各阶层人口、土地劳动力百分比分配表</a>
+                                    <a href="3.068.html">1.5.18 1937年与1945年土地阶级情况比较表</a>
+                                    <a href="3.069.html">1.5.19 1937-1945年农业负担统计表</a>
+                                    <a href="3.078.html">1.5.20 各阶层土地买卖情况统计表</a>
+                                    <a href="3.205.html">1.5.21 北岳区八个村户口人口标准亩比较表</a>
+                                    <a href="3.209.html">1.5.22 十一个村庄贫农人口占村人口百分数比较表（表一）</a>
+                                    <a href="3.211.html">1.5.23 任家庄村各阶层人口比例与负担情况统计表（表四）</a>
+                                    <a href="3.225.html">1.5.24 晋中区统累稅代表村代表户各阶层再生产消费负担分配表</a>
+                                    <a href="3.235.html">1.5.25 人口统计表</a>
+                                    <a href="3.244.html">1.5.26 六专区未分别阶层统计故未列入。</a>
+                                    <a href="3.256.html">1.5.27 土地统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.6 土地占有</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.012.html">1.6.1 唐县二区中窖沟村四户生产情状比较表</a>
+                                    <a href="3.031.html">1.6.2 任丘-献县-河区地亩统计表</a>
+                                    <a href="3.053.html">1.6.3 民国三十三年年度北岳区扩大耕地面积统计表</a>
+                                    <a href="3.054.html">1.6.4 民国三十三年度北岳区水利建设统计表（表二）</a>
+                                    <a href="3.055.html">1.6.5 北岳区四十二个村两年产量比较表（表三）</a>
+                                    <a href="3.057.html">1.6.6 平地用工工数统计表</a>
+                                    <a href="3.061.html">1.6.7 北岳区历年水利建设统计表</a>
+                                    <a href="3.062.html">1.6.8 六个区一一九个村的统计</a>
+                                    <a href="3.065.html">1.6.9 抗战前后农村经济概况对照表</a>
+                                    <a href="3.070.html">1.6.10 乡村生产与人口统计表 (1937-1945)</a>
+                                    <a href="3.072.html">1.6.11 沟子口候村 统计表</a>
+                                    <a href="3.073.html">1.6.12 榆次两个村庄战前战后比较表</a>
+                                    <a href="3.079.html">1.6.13 1937-1942年户数与土地占比统计</a>
+                                    <a href="3.206.html">1.6.14 北岳区五个村庄土地关系简表</a>
+                                    <a href="3.210.html">1.6.15 任家庄村土地种类使用概括（表二）</a>
+                                    <a href="3.221.html">1.6.16 唐县各区平均数字表（表一）</a>
+                                    <a href="3.222.html">1.6.17 行唐各区平均数字表（表二）</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.7 人口</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.004.html">1.7.1 晋察冀边区区域面积人口统计表（1944.11）</a>
+                                    <a href="3.046.html">1.7.2 纺织业-荆货业-磨坊业-小商业-1937-1942年</a>
+                                    <a href="3.056.html">1.7.3 各专区缺粮户数对比表</a>
+                                    <a href="3.099.html">1.7.4 宛县一、二两区人民生活统计表</a>
+                                    <a href="3.135.html">1.7.5 北岳区出人口货物分类处理表</a>
+                                    <a href="3.136.html">1.7.6 晋察冀边区北岳区入口货物分类处理表</a>
+                                    <a href="3.204.html">1.7.7 税收统计表</a>
+                                    <a href="3.207.html">1.7.8 北岳区五个村纳税与非纳税户数人口及每人负担分数</a>
+                                    <a href="3.212.html">1.7.9 任家庄村纳税人口富力分数统计表（表三）</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.8 人民生活</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.194.html">1.8.1 冀晋区合作社信用存根统计表</a>
+                                    <a href="3.201.html">1.8.2 晋察冀边区本产货物出口分类处理表</a>
+                                    <a href="3.213.html">1.8.3 民国三十年度公粮完成数占分配数百分比及占原分配数减灾后百分比表</a>
+                                    <a href="3.238.html">1.8.4 政府粮食部门组织编制表</a>
+                                    <a href="3.264.html">1.8.5 三专区商店设置情形表</a>
+                                    <a href="3.265.html">1.8.6 1942年北岳区查获出入口私货统计表</a>
+                                    <a href="3.271.html">1.8.7 边区财政开支状况</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.9 财政</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.014.html">1.9.1 民国27-30年开支数变化表</a>
+                                    <a href="3.016.html">1.9.2 民国27-30年收支比较统计表</a>
+                                    <a href="3.017.html">1.9.3 民国二十七至三十一年公粮收支概况表</a>
+                                    <a href="3.092.html">1.9.4 边委会民国三十一年年度拨发北岳区各县赈粮赈款表</a>
+                                    <a href="3.153.html">1.9.5 边区一至五月份出入口税收与开支费用比较表</a>
+                                    <a href="3.163.html">1.9.6 一九四二年各机关托购货物与完成情形对比表 (附表十三)</a>
+                                    <a href="3.227.html">1.9.7 安平崔安铺不同时期对敌各项开支比较表</a>
+                                    <a href="3.228.html">1.9.8 对敌开支项目比较表</a>
+                                    <a href="3.270.html">1.9.9 边区财政收入情况（以1938年为100）</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.10 税收</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.074.html">1.10.1 一九四一年至一九四四年税额变化</a>
+                                    <a href="3.158.html">1.10.2 一九四二年税收统计表 (附表六)</a>
+                                    <a href="3.164.html">1.10.3 一九四二年各商店配合统累税征收吸收游击区物资统计表(附表十四)</a>
+                                    <a href="3.197.html">1.10.4 村合理负担分数表</a>
+                                    <a href="3.198.html">1.10.5 合理负担分数简便计算表</a>
+                                    <a href="3.214.html">1.10.6 民国三十年度北岳区各县统一累进税款完成与解库统计表</a>
+                                    <a href="3.215.html">1.10.7 民国三十年度北岳区各县损失统一累进税款统计表</a>
+                                    <a href="3.216.html">1.10.8 民国三十年度北岳区各县统累税款损失经过分类统计</a>
+                                    <a href="3.226.html">1.10.9 对敌对我负担比例统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.11 对外经济贸易</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.125.html">1.11.1 晋察冀边区外贸入口分类处理表</a>
+                                    <a href="3.127.html">1.11.2 晋察冀边区冀中区出口货物分类处理表</a>
+                                    <a href="3.128.html">1.11.3 晋察冀边区冀中区入口货物分类处理表</a>
+                                    <a href="3.130.html">1.11.4 敌 货 鉴 别 表</a>
+                                    <a href="3.138.html">1.11.5 晋察冀边区北岳区出口货物分类处理表</a>
+                                    <a href="3.139.html">1.11.6 北岳区入口货物分类处理表</a>
+                                    <a href="3.141.html">1.11.7 平山专区各县合作社贸易局概况表</a>
+                                    <a href="3.152.html">1.11.8 各专区商店春季各项货物营业比重分析统计</a>
+                                    <a href="3.156.html">1.11.9 一九四一年以前贸易管理局组织概况(附表二)</a>
+                                    <a href="3.159.html">1.11.10 一九四二年查获出入口私货统计表 (附表七)</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.12 农业</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.011.html">1.12.1 冀晋区施肥比较表</a>
+                                    <a href="3.051.html">1.12.2 农林畜殖局计算表</a>
+                                    <a href="3.052.html">1.12.3 放债与收租情况统计表</a>
+                                    <a href="3.059.html">1.12.4 1944年施肥变化情况统计表</a>
+                                    <a href="3.071.html">1.12.5 牲畜施肥情形的比较</a>
+                                    <a href="3.082.html">1.12.6 春耕生产统计表</a>
+                                    <a href="3.121.html">1.12.7 二专各县粮换布比较表</a>
+                                    <a href="3.166.html">1.12.8 (一)贷布人数布数金额统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.13 工业</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.045.html">1.13.1 三四五专区纺织人数统计</a>
+                                    <a href="3.089.html">1.13.2 从业情况统计表</a>
+                                    <a href="3.102.html">1.13.3 边 区 各 县 煤 矿 统 计 表</a>
+                                    <a href="3.154.html">1.13.4 化学厂组织机构表</a>
+                                    <a href="3.193.html">1.13.5 冀晋区合作社半年来生产作坊状况统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.14 商业</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.143.html">1.14.1 新商店组织设置业务性质分析统计 附表三</a>
+                                    <a href="3.144.html">1.14.2 商店营业性质及生产种类统计</a>
+                                    <a href="3.151.html">1.14.3 商店变公营为公私合营执行检讨比较表(以一店为单位)</a>
+                                    <a href="3.157.html">1.14.4 北岳区商店一九四二年状况一览表(附表三)</a>
+                                    <a href="3.165.html">1.14.5 一九四二年商店代收军需原料统计表(附表十五)</a>
+                                    <a href="3.307.html">1.14.6 1946年5月冀中分行机构统计表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.15 合作社</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.006.html">1.15.1 晋察冀边区合作社分类统计表（民国二十九年七月十八日）</a>
+                                    <a href="3.058.html">1.15.2 民国三十三年北岳区合作社发展比较表</a>
+                                    <a href="3.181.html">1.15.3 边区合作社历年发展表</a>
+                                    <a href="3.182.html">1.15.4 各专区社数比较表</a>
+                                    <a href="3.183.html">1.15.5 晋 察 翼 边 区 各 专 区 合 作 社 一 览 表 1940.2.29制</a>
+                                    <a href="3.184.html">1.15.6 边 区 各 县 合 作 社 统 计 表 1940.2.29制</a>
+                                    <a href="3.185.html">1.15.7 北岳区合作社分类统计表* 一九四○年七月十八日制</a>
+                                    <a href="3.186.html">1.15.8 晋察冀边区二十九年度八月份合作社统计表</a>
+                                    <a href="3.187.html">1.15.9 晋察冀边区各县合作社统计表</a>
+                                    <a href="3.191.html">1.15.10 一九四一年年底北岳区合作社数量统计表</a>
+                                    <a href="3.192.html">1.15.11 冀晋区合作社半年来发展状况统计表 (一九四五年一月至六月)</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.16 公共管理</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.008.html">1.16.1 冀中区民兵五年来成绩统计表（民国27年﹣11年）</a>
+                                    <a href="3.009.html">1.16.2 北岳区民兵五年来成绩统计表 （民国27年-31年） (2)</a>
+                                    <a href="3.025.html">1.16.3 县政权公杂费及工作员津贴制度</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">1.17 其他</div>
+                            <div class="content hide">
+                                <div class="threeheader">
+                                    <a href="3.013.html">1.17.1 四专区各县小麦产量比较表</a>
+                                    <a href="3.015.html">1.17.2 民国27-30年收入构成及总量变化表</a>
+                                    <a href="3.027.html">1.17.3 会员数量变化统计-2023</a>
+                                    <a href="3.028.html">1.17.4 新订产量与租实交数统计表</a>
+                                    <a href="3.036.html">1.17.5 村庄整治情况统计表</a>
+                                    <a href="3.044.html">1.17.6 1937-1942年铁木机数量统计</a>
+                                    <a href="3.050.html">1.17.7 随机排列法</a>
+                                    <a href="3.060.html">1.17.8 民国三十三年度北岳区耕畜补充统计表</a>
+                                    <a href="3.075.html">1.17.9 解放区村庄生产情况对比表</a>
+                                    <a href="3.076.html">1.17.10 植棉</a>
+                                    <a href="3.077.html">1.17.11 游击区开展生产情况表</a>
+                                    <a href="3.085.html">1.17.12 龙塘赤高低租额统计表</a>
+                                    <a href="3.097.html">1.17.13 出绊布匹工资统计表</a>
+                                    <a href="3.108.html">1.17.14 万有纸广固定设备物工具家俱详表</a>
+                                    <a href="3.123.html">1.17.15 二专区各县植棉亩数产量统计表</a>
+                                    <a href="3.126.html">1.17.16 敌 贸 鉴 别 表</a>
+                                    <a href="3.145.html">1.17.17 (不完全) ( 附 表 2 )</a>
+                                    <a href="3.195.html">1.17.18 冀中军区1945年7月至9月份经费予算表</a>
+                                    <a href="3.247.html">1.17.19 冀中区政民人数统计表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="twoheader" onclick="clickMe(this);">调查</div>
+                        <div class="content hide">
+                            <div class="twoheader" onclick="clickMe(this);">2.1 价格</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.160.html">2.1.1 一九四二年阜平灵寿县平山盂县四种山货调查表 (附表九)</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.2 租佃与债务</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.086.html">2.2.1 龙延怀租额高低典型户调查表</a>
+                                    <a href="3.087.html">2.2.2 龙赤租额高低的典型户调查表</a>
+                                    <a href="3.196.html">2.2.3 民户合理负担比例分数调查简表</a>
+                                    <a href="3.230.html">2.2.4 表二、一区贾峪村典型户调查表</a>
+                                    <a href="3.233.html">2.2.5 表五、四区刘家庄典型户收入与负担情形调查表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.3 阶级构成</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.231.html">2.3.1 表三、三区东杨山各阶层负担情形调查表</a>
+                                    <a href="3.232.html">2.3.2 表四、第四区上邵村全村负担调查表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.4 土地占有</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.223.html">2.4.1 民国卅一年统累稅调查村与改算村平均数字比较表（表三）</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.5 人口</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.258.html">2.5.1 完县一、二区人民生活统计（3月初的调查）</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.6 人民生活</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.090.html">2.6.1 灾民数目 (调查)</a>
+                                    <a href="3.112.html">2.6.2 纺 织 工 厂 调 查 表</a>
+                                    <a href="3.168.html">2.6.3 第四专区巩固区市场调查概况一览表 1944.1.</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.7 税收</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.220.html">2.7.1 民国三十二年各县调查工作要求标准比较表</a>
+                                    <a href="3.224.html">2.7.2 敌我八个月负担统计</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.8 对外经济贸易</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.162.html">2.8.1 一九四二年雁北与阜平主要物资调剂调查表 (附表八)</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.9 工业</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.101.html">2.9.1 边区各县金属矿产调查表</a>
+                                    <a href="3.111.html">2.9.2 边区各县非金属矿产调查表</a>
+                                    <a href="3.113.html">2.9.3 毛 口 袋 调 查 表</a>
+                                    <a href="3.116.html">2.9.4 造纸厂调查表</a>
+                                    <a href="3.117.html">2.9.5 工具制造厂调查表</a>
+                                    <a href="3.119.html">2.9.6 毛皮工厂调查表</a>
+                                    <a href="3.267.html">2.9.7 七县油坊调查表</a>
+                                    <a href="3.268.html">2.9.8 晋察冀边区1942年造纸厂调查表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.10 合作社</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.114.html">2.10.1 油 房 调 查 表</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.11 公共管理</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.081.html">2.11.1 二十九个英模所在村支部领导生产情况调查</a>
+                                    <a href="3.146.html">2.11.2 支局各卡组织干部统计</a>
+                                </div>
+                            </div>
+                            <div class="twoheader" onclick="clickMe(this);">2.12 其他</div>
+                            <div class="content">
+                                <div class="threeheader">
+                                    <a href="3.080.html">2.12.1 县委领导大生产情形调查</a>
+                                    <a href="3.103.html">2.12.2 冀中土布产销调查表</a>
+                                    <a href="3.115.html">2.12.3 革柏厂调查表</a>
+                                    <a href="3.118.html">2.12.4 水磨调查表</a>
+                                    <a href="3.120.html">2.12.5 胰 厂 调 查 表</a>
+                                    <a href="3.161.html">2.12.6 一九四二年边区药材产量调查表(附表十)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 新结构结束 -->
+        
+                
+            </div>
+        </div>
+
+    <div id="main">
+            <img src="img/3.073.svg" style="display: block; width: auto; height: auto; max-width: 100%; max-height: 900px; margin: 0 auto;" alt="榆次两个村庄战前战后比较表">    
+    </div>
+</nav>
+
+<ul class="links">
+    <li style="padding:0;"><img src="img/links1.png" width="350" height="75"></li>
+    <li style="padding:0;"><a href="https://dangan.shu.edu.cn/" target="_blank"><img src="img/links2.png" width="350" height="75"></a></li>
+    <li style="padding:0;"><a href="http://www.ccerdata.cn/" target="_blank"><img src="img/links3.png" width="350" height="75"></a></li>
+</ul>
+<div id="footer">
+    <p>&nbsp; &nbsp;<span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">版权所有 ©</span><a style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">&nbsp;红色经济史研究中心</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;"></a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;</span><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp;&nbsp; &nbsp;邮编：200444 &nbsp;&nbsp;</span></p>
+</div>
+
+<script src="js/jquery-3.7.1.min/jquery-3.7.1.min.js"></script>
+<script type="text/javascript">
+    function clickMe(self) {
+        // 只关闭同级菜单，不关闭父级菜单
+        $(self).parent().siblings().find(".content").addClass("hide");
+        
+        // 切换当前菜单的展开/收起状态
+        var hasHide = $(self).next().hasClass("hide");
+        if (hasHide) {
+            $(self).next().removeClass("hide");
+        } else {
+            $(self).next().addClass("hide");
+        }
+    }
+    // 新增：页面加载时初始化导航状态
+    $(document).ready(function() {
+        // 1. 获取当前页面URL
+        var currentPage = window.location.pathname.split('/').pop();
+        if (!currentPage) currentPage = "index.html";
+        
+        // 2. 查找当前页面对应的导航项
+        var $currentNavItem = null;
+        $('.menus a').each(function() {
+            var href = $(this).attr('href');
+            if (href && href.endsWith(currentPage)) {
+                $currentNavItem = $(this);
+                return false; // 找到后退出循环
+            }
+        });
+        
+        // 3. 如果找到当前页面导航项
+        if ($currentNavItem) {
+            // 添加高亮样式
+            $currentNavItem.addClass('active-page');
+            
+            // 4. 逐级展开父级菜单
+            var $parents = $currentNavItem.parentsUntil('.menus', '.content');
+            $parents.each(function() {
+                $(this).removeClass('hide');
+                
+                // 同时展开父级菜单的header
+                var $header = $(this).prev('.header, .twoheader');
+                if ($header.length) {
+                    $header.removeClass('hide');
+                }
+            });
+        }
+        
+        // 5. 特殊处理：首页高亮
+        if (currentPage === "index.html") {
+            $('.menus a[href="index.html"]').addClass('active-page');
+        }
+    });
+</script>
+
+</body>
+</html>
