@@ -2,8 +2,3 @@
   width: 100%;
   max-height: 400px; /* 自行设定高度 */
 }
-
-/* 保留统计和调查中的全部数据条目 */
-.menus .content.hide {
-  display: block !important;
-}
