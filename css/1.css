@@ -3,7 +3,7 @@
   max-height: 400px; /* 自行设定高度 */
 }
 
-/* 具体数据页中展开全部同类目录 */
-.menus:has(a.active-page[href^="3."]) .content.hide {
+/* 保留统计和调查中的全部数据条目 */
+.menus .content.hide {
   display: block !important;
 }
